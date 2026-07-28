@@ -271,4 +271,4 @@ Open source. Use for learning, extend as you like.
 
 ---
 
-**Last updated:** 2024 | **Status:** Ready to use
+**Last updated:** 2026 | **Status:** Ready to use
