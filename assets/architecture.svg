@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" font-family="'Segoe UI',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1428"/><stop offset="1" stop-color="#0A0E1F"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1 L8 5 L2 9" fill="none" stroke="#8B96BC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="880" height="300" rx="14" fill="url(#bg)"/>
+  <text x="28" y="42" fill="#EEF1FB" font-size="17" font-weight="600">NYC Taxi Lakehouse — Medallion Pipeline</text>
+  <text x="28" y="62" fill="#8B96BC" font-size="12">Azure Data Factory · ADLS Gen2 · Databricks · Delta Lake · Unity Catalog</text>
+
+  <!-- nodes -->
+  <g font-size="12.5">
+    <!-- source -->
+    <rect x="28"  y="96" width="150" height="70" rx="9" fill="#141B33" stroke="#26304F"/>
+    <text x="42" y="120" fill="#8B96BC" font-size="9.5" letter-spacing="1.5">SOURCE</text>
+    <text x="42" y="140" fill="#EEF1FB" font-weight="600">NYC TLC</text>
+    <text x="42" y="157" fill="#8B96BC" font-size="10.5">parquet · 12 months</text>
+
+    <!-- ADF -->
+    <rect x="206" y="96" width="150" height="70" rx="9" fill="#141B33" stroke="#26304F"/>
+    <text x="220" y="120" fill="#8B96BC" font-size="9.5" letter-spacing="1.5">ORCHESTRATION</text>
+    <text x="220" y="140" fill="#EEF1FB" font-weight="600">Data Factory</text>
+    <text x="220" y="157" fill="#8B96BC" font-size="10.5">ForEach · parameterised</text>
+
+    <!-- bronze -->
+    <rect x="384" y="96" width="150" height="70" rx="9" fill="#141B33" stroke="#26304F"/>
+    <rect x="384" y="96" width="150" height="3" rx="1.5" fill="#C97C46"/>
+    <text x="398" y="120" fill="#8B96BC" font-size="9.5" letter-spacing="1.5">LAYER 01</text>
+    <text x="398" y="140" fill="#EEF1FB" font-weight="600">Bronze</text>
+    <text x="398" y="157" fill="#8B96BC" font-size="10.5">raw · immutable</text>
+
+    <!-- silver -->
+    <rect x="562" y="96" width="150" height="70" rx="9" fill="#141B33" stroke="#26304F"/>
+    <rect x="562" y="96" width="150" height="3" rx="1.5" fill="#A6B2D6"/>
+    <text x="576" y="120" fill="#8B96BC" font-size="9.5" letter-spacing="1.5">LAYER 02</text>
+    <text x="576" y="140" fill="#EEF1FB" font-weight="600">Silver</text>
+    <text x="576" y="157" fill="#8B96BC" font-size="10.5">typed · deduplicated</text>
+
+    <!-- gold -->
+    <rect x="722" y="96" width="130" height="70" rx="9" fill="#141B33" stroke="#26304F"/>
+    <rect x="722" y="96" width="130" height="3" rx="1.5" fill="#E9B454"/>
+    <text x="736" y="120" fill="#8B96BC" font-size="9.5" letter-spacing="1.5">LAYER 03</text>
+    <text x="736" y="140" fill="#EEF1FB" font-weight="600">Gold</text>
+    <text x="736" y="157" fill="#8B96BC" font-size="10.5">aggregated</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#8B96BC" stroke-width="1.4">
+    <line x1="180" y1="131" x2="202" y2="131" marker-end="url(#arr)"/>
+    <line x1="358" y1="131" x2="380" y2="131" marker-end="url(#arr)"/>
+    <line x1="536" y1="131" x2="558" y2="131" marker-end="url(#arr)"/>
+    <line x1="714" y1="131" x2="718" y2="131" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- governance band -->
+  <rect x="384" y="206" width="468" height="52" rx="9" fill="#111A30" stroke="#2A3350" stroke-dasharray="4 3"/>
+  <text x="404" y="230" fill="#7C83F5" font-size="11" font-weight="600" letter-spacing="1">UNITY CATALOG  ·  external locations</text>
+  <text x="404" y="247" fill="#8B96BC" font-size="10.5">Access Connector managed identity · no keys, no secrets in notebooks</text>
+  <g stroke="#313D63" ></g>
+  <g stroke="#313D63" stroke-width="1.2" stroke-dasharray="3 3">
+    <line x1="459" y1="166" x2="459" y2="204" marker-end="url(#arr)"/>
+    <line x1="637" y1="166" x2="637" y2="204" marker-end="url(#arr)"/>
+    <line x1="787" y1="166" x2="787" y2="204" marker-end="url(#arr)"/>
+  </g>
+
+  <text x="28" y="230" fill="#8B96BC" font-size="10.5">Compute:</text>
+  <text x="28" y="247" fill="#A9B3D6" font-size="10.5">Databricks</text>
+  <text x="28" y="262" fill="#A9B3D6" font-size="10.5">serverless · PySpark</text>
+</svg>
