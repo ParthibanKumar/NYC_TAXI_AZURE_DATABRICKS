@@ -214,14 +214,6 @@ This is what **enterprise teams** look like.
 - The concepts transfer to Kafka streaming (just-in-time instead of batch)
 
 ---
-
-## 📚 Learn More
-
-- **Want to understand the architecture in detail?** → Read [`docs/NYC_TAXI_LAKEHOUSE.md`](docs/NYC_TAXI_LAKEHOUSE.md)
-- **Want field-level mapping?** → See [`docs/NYC_TAXI_Mapping_Spec.xlsx`](docs/NYC_TAXI_Mapping_Spec.xlsx)
-- **Want to run this yourself?** → Follow [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- **Want to extend it?** → See "Extensions" below
-
 ---
 
 ## 🔄 Possible Extensions
@@ -263,13 +255,6 @@ Want to build on this? Here are ideas:
 
 ---
 
-## 📞 Questions?
-
-- **"How do I run this?"** → See [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- **"Why did you choose this approach?"** → See [`docs/NYC_TAXI_LAKEHOUSE.md`](docs/NYC_TAXI_LAKEHOUSE.md)
-- **"What if my data looks different?"** → The pipeline is modular; swap `extract/reader.py` with your own source
-- **"Can I adapt this for my data?"** → Yes! The Medallion pattern works for any tabular data
-
 ---
 
 ## 📄 License
@@ -282,12 +267,7 @@ Open source. Use for learning, extend as you like.
 
 ---
 
-## 🤝 Contributing
 
-Pull requests welcome! Before contributing:
-1. Check [`CONTRIBUTING.md`](CONTRIBUTING.md) for setup
-2. Run the pipeline end-to-end
-3. Add tests for any new modules
 
 ---
 
